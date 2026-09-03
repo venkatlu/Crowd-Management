@@ -1,0 +1,197 @@
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F9FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E9ECEF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="80" fill="url(#headerGrad)"/>
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">
+    AI-Driven Real-Time Crowd Management System Architecture
+  </text>
+  
+  <!-- Video Sources Layer -->
+  <g id="video-sources">
+    <rect x="50" y="120" width="200" height="60" rx="10" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
+    <text x="150" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1976D2" text-anchor="middle">Video Sources</text>
+    <text x="150" y="165" font-family="Arial, sans-serif" font-size="12" fill="#1976D2" text-anchor="middle">(5 Zones)</text>
+    
+    <!-- Zone boxes -->
+    <rect x="50" y="200" width="90" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="1"/>
+    <text x="95" y="220" font-family="Arial, sans-serif" font-size="10" fill="#1976D2" text-anchor="middle">Ground Floor</text>
+    <text x="95" y="235" font-family="Arial, sans-serif" font-size="9" fill="#1976D2" text-anchor="middle">(100 cap)</text>
+    
+    <rect x="150" y="200" width="90" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="1"/>
+    <text x="195" y="220" font-family="Arial, sans-serif" font-size="10" fill="#1976D2" text-anchor="middle">Hall</text>
+    <text x="195" y="235" font-family="Arial, sans-serif" font-size="9" fill="#1976D2" text-anchor="middle">(200 cap)</text>
+    
+    <rect x="50" y="260" width="90" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="1"/>
+    <text x="95" y="280" font-family="Arial, sans-serif" font-size="10" fill="#1976D2" text-anchor="middle">Balcony</text>
+    <text x="95" y="295" font-family="Arial, sans-serif" font-size="9" fill="#1976D2" text-anchor="middle">(50 cap)</text>
+    
+    <rect x="150" y="260" width="90" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="1"/>
+    <text x="195" y="280" font-family="Arial, sans-serif" font-size="10" fill="#1976D2" text-anchor="middle">Lobby</text>
+    <text x="195" y="295" font-family="Arial, sans-serif" font-size="9" fill="#1976D2" text-anchor="middle">(30 cap)</text>
+    
+    <rect x="100" y="320" width="90" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="1"/>
+    <text x="145" y="340" font-family="Arial, sans-serif" font-size="10" fill="#1976D2" text-anchor="middle">Parking</text>
+    <text x="145" y="355" font-family="Arial, sans-serif" font-size="9" fill="#1976D2" text-anchor="middle">(40 cap)</text>
+  </g>
+  
+  <!-- Video Streamer -->
+  <rect x="350" y="250" width="180" height="100" rx="10" fill="url(#boxGrad)" stroke="#4CAF50" stroke-width="3" filter="url(#shadow)"/>
+  <text x="440" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2E7D32" text-anchor="middle">Video Streamer</text>
+  <text x="440" y="300" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">OpenCV Processing</text>
+  <text x="440" y="320" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">Frame Extraction</text>
+  <text x="440" y="335" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">Multi-Stream Handler</text>
+  
+  <!-- AI People Counter -->
+  <rect x="600" y="250" width="180" height="100" rx="10" fill="url(#boxGrad)" stroke="#FF9800" stroke-width="3" filter="url(#shadow)"/>
+  <text x="690" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#E65100" text-anchor="middle">AI People Counter</text>
+  <text x="690" y="300" font-family="Arial, sans-serif" font-size="12" fill="#E65100" text-anchor="middle">YOLO v8 Model</text>
+  <text x="690" y="320" font-family="Arial, sans-serif" font-size="12" fill="#E65100" text-anchor="middle">Object Detection</text>
+  <text x="690" y="335" font-family="Arial, sans-serif" font-size="12" fill="#E65100" text-anchor="middle">People Counting</text>
+  
+  <!-- Monitoring Service -->
+  <rect x="850" y="250" width="180" height="100" rx="10" fill="url(#boxGrad)" stroke="#9C27B0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="940" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#6A1B9A" text-anchor="middle">Monitoring Service</text>
+  <text x="940" y="300" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A" text-anchor="middle">Alert Management</text>
+  <text x="940" y="320" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A" text-anchor="middle">Threshold Checking</text>
+  <text x="940" y="335" font-family="Arial, sans-serif" font-size="12" fill="#6A1B9A" text-anchor="middle">Anomaly Detection</text>
+  
+  <!-- Database -->
+  <rect x="350" y="450" width="180" height="100" rx="10" fill="url(#boxGrad)" stroke="#607D8B" stroke-width="3" filter="url(#shadow)"/>
+  <text x="440" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#37474F" text-anchor="middle">SQLite Database</text>
+  <text x="440" y="500" font-family="Arial, sans-serif" font-size="12" fill="#37474F" text-anchor="middle">Zone Data Storage</text>
+  <text x="440" y="520" font-family="Arial, sans-serif" font-size="12" fill="#37474F" text-anchor="middle">Alert History</text>
+  <text x="440" y="535" font-family="Arial, sans-serif" font-size="12" fill="#37474F" text-anchor="middle">Statistics</text>
+  
+  <!-- Notification Manager -->
+  <rect x="600" y="450" width="180" height="100" rx="10" fill="url(#boxGrad)" stroke="#F44336" stroke-width="3" filter="url(#shadow)"/>
+  <text x="690" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#C62828" text-anchor="middle">Notification Manager</text>
+  <text x="690" y="500" font-family="Arial, sans-serif" font-size="12" fill="#C62828" text-anchor="middle">SMS (Twilio)</text>
+  <text x="690" y="520" font-family="Arial, sans-serif" font-size="12" fill="#C62828" text-anchor="middle">Email (SMTP)</text>
+  <text x="690" y="535" font-family="Arial, sans-serif" font-size="12" fill="#C62828" text-anchor="middle">Alert Cooldown</text>
+  
+  <!-- FastAPI Server -->
+  <rect x="850" y="450" width="180" height="100" rx="10" fill="url(#boxGrad)" stroke="#00BCD4" stroke-width="3" filter="url(#shadow)"/>
+  <text x="940" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00838F" text-anchor="middle">FastAPI Server</text>
+  <text x="940" y="500" font-family="Arial, sans-serif" font-size="12" fill="#00838F" text-anchor="middle">REST API</text>
+  <text x="940" y="520" font-family="Arial, sans-serif" font-size="12" fill="#00838F" text-anchor="middle">WebSocket (WS)</text>
+  <text x="940" y="535" font-family="Arial, sans-serif" font-size="12" fill="#00838F" text-anchor="middle">Port 8000</text>
+  
+  <!-- Dashboard -->
+  <rect x="1050" y="350" width="120" height="150" rx="10" fill="url(#boxGrad)" stroke="#795548" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1110" y="380" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#5D4037" text-anchor="middle">Dashboard</text>
+  <text x="1110" y="405" font-family="Arial, sans-serif" font-size="12" fill="#5D4037" text-anchor="middle">HTML/JS</text>
+  <text x="1110" y="425" font-family="Arial, sans-serif" font-size="12" fill="#5D4037" text-anchor="middle">Real-Time</text>
+  <text x="1110" y="445" font-family="Arial, sans-serif" font-size="12" fill="#5D4037" text-anchor="middle">Monitoring</text>
+  <text x="1110" y="465" font-family="Arial, sans-serif" font-size="12" fill="#5D4037" text-anchor="middle">Charts &amp; Alerts</text>
+  <text x="1110" y="485" font-family="Arial, sans-serif" font-size="12" fill="#5D4037" text-anchor="middle">Mobile Friendly</text>
+  
+  <!-- Arrows: Video Sources to Video Streamer -->
+  <path d="M 250 275 L 350 300" stroke="#1976D2" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 250 275 L 350 300" stroke="#1976D2" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: Video Streamer to AI Counter -->
+  <path d="M 530 300 L 600 300" stroke="#4CAF50" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: AI Counter to Monitoring Service -->
+  <path d="M 780 300 L 850 300" stroke="#FF9800" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: Monitoring Service to Database -->
+  <path d="M 940 350 L 940 450" stroke="#9C27B0" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: Monitoring Service to Notification Manager -->
+  <path d="M 850 300 L 690 450" stroke="#9C27B0" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: Monitoring Service to FastAPI -->
+  <path d="M 1030 300 L 940 450" stroke="#9C27B0" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: FastAPI to Dashboard -->
+  <path d="M 1030 500 L 1050 425" stroke="#00BCD4" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow: Database to FastAPI (for queries) -->
+  <path d="M 530 500 L 850 500" stroke="#607D8B" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  
+  <!-- Arrow: FastAPI to Notification Manager (for test endpoints) -->
+  <path d="M 850 500 L 780 500" stroke="#00BCD4" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- External Services -->
+  <g id="external-services">
+    <rect x="50" y="600" width="150" height="60" rx="10" fill="#FFF3E0" stroke="#FF6F00" stroke-width="2" filter="url(#shadow)"/>
+    <text x="125" y="625" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">Twilio SMS</text>
+    <text x="125" y="645" font-family="Arial, sans-serif" font-size="12" fill="#E65100" text-anchor="middle">External Service</text>
+    
+    <rect x="250" y="600" width="150" height="60" rx="10" fill="#FFF3E0" stroke="#FF6F00" stroke-width="2" filter="url(#shadow)"/>
+    <text x="325" y="625" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">SMTP Server</text>
+    <text x="325" y="645" font-family="Arial, sans-serif" font-size="12" fill="#E65100" text-anchor="middle">Email Service</text>
+    
+    <rect x="450" y="600" width="150" height="60" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" filter="url(#shadow)"/>
+    <text x="525" y="625" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Security Staff</text>
+    <text x="525" y="645" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">Recipients</text>
+  </g>
+  
+  <!-- Arrows from Notification Manager to External Services -->
+  <path d="M 600 500 L 125 600" stroke="#F44336" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 690 500 L 325 600" stroke="#F44336" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 690 550 L 525 600" stroke="#F44336" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="750" width="1100" height="120" rx="10" fill="#F5F5F5" stroke="#CCCCCC" stroke-width="2"/>
+  <text x="600" y="775" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">Legend</text>
+  
+  <rect x="80" y="790" width="15" height="15" fill="#1976D2"/>
+  <text x="105" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">Video Input</text>
+  
+  <rect x="250" y="790" width="15" height="15" fill="#4CAF50"/>
+  <text x="275" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">Processing</text>
+  
+  <rect x="420" y="790" width="15" height="15" fill="#FF9800"/>
+  <text x="445" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">AI/ML</text>
+  
+  <rect x="550" y="790" width="15" height="15" fill="#9C27B0"/>
+  <text x="575" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">Core Service</text>
+  
+  <rect x="700" y="790" width="15" height="15" fill="#607D8B"/>
+  <text x="725" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">Data Storage</text>
+  
+  <rect x="850" y="790" width="15" height="15" fill="#F44336"/>
+  <text x="875" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">Notifications</text>
+  
+  <rect x="1000" y="790" width="15" height="15" fill="#00BCD4"/>
+  <text x="1025" y="802" font-family="Arial, sans-serif" font-size="12" fill="#333">API/Web</text>
+  
+  <line x1="80" y1="820" x2="95" y2="820" stroke="#333" stroke-width="2"/>
+  <text x="105" y="825" font-family="Arial, sans-serif" font-size="12" fill="#333">Solid = Direct Flow</text>
+  
+  <line x1="350" y1="820" x2="365" y2="820" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="375" y="825" font-family="Arial, sans-serif" font-size="12" fill="#333">Dashed = Query/Response</text>
+</svg>
